@@ -25,6 +25,8 @@ class SearchPage extends StatelessWidget {
                   .getHourlyData(cityName: cityName);
               Provider.of<WeatherProvider>(context, listen: false)
                   .getForecastData(cityName: cityName);
+              Provider.of<WeatherProvider>(context, listen: false)
+                  .getLocationData(cityName: cityName);
               Navigator.pop(context);
             },
             decoration: InputDecoration(
@@ -41,6 +43,8 @@ class SearchPage extends StatelessWidget {
                       .getHourlyData(cityName: cityName);
                   Provider.of<WeatherProvider>(context, listen: false)
                       .getForecastData(cityName: cityName);
+                  Provider.of<WeatherProvider>(context, listen: false)
+                      .getLocationData(cityName: cityName);
                   Navigator.pop(context);
                 },
                 icon: const Icon(Icons.search),

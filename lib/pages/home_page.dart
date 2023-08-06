@@ -7,12 +7,15 @@ import '../components/forecast_component.dart';
 import '../components/hourly_component.dart';
 import '../models/forecasts_model.dart';
 import '../models/hourly_model.dart';
+import '../models/location_model.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    LocationModel? locationData =
+        Provider.of<WeatherProvider>(context).locationWeather;
     List<HourlyModel> hourlyData =
         Provider.of<WeatherProvider>(context).hourlyWeather;
     List<ForecastModel> forecastData =
@@ -30,7 +33,9 @@ class HomePage extends StatelessWidget {
                   flex: 6,
                 ),
                 Text(
-                  '${Provider.of<WeatherProvider>(context, listen: false).cityName}',
+                  locationData?.cityName != null
+                      ? '${locationData?.cityName}'
+                      : '${locationData?.country}',
                   style: TextStyle(
                     fontSize: 30,
                     color: Colors.white,

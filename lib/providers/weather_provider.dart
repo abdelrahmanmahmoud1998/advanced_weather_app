@@ -11,6 +11,7 @@ class WeatherProvider extends ChangeNotifier {
   LocationModel? locationWeather;
   List<HourlyModel> hourlyWeather = [];
   List<ForecastModel> forecastWeather = [];
+
   void getLocationData({required cityName}) async {
     LocationService locationService = LocationService();
     locationWeather = await locationService.getLocation(cityName: cityName);
