@@ -32,6 +32,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_countries: ^1.0.2
+  flutter_screen_lock: ^9.0.1
+  flutter_screenutil: ^5.8.4
   font_awesome_flutter: ^10.5.0
   http: ^1.1.0
   intl: ^0.18.1

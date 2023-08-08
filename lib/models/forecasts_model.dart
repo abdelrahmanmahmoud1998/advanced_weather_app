@@ -34,7 +34,8 @@ class ForecastModel {
     } else if (forecastStateName.contains('Rain') ||
         forecastStateName.contains('rain')) {
       return Colors.blue;
-    } else
+    } else {
       return Colors.lightBlue;
+    }
   }
 }
